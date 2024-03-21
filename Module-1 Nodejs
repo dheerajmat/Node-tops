@@ -1,0 +1,39 @@
+Question 1: What is the difference between Java & JavaScript?
+Answer: Java is a programming language used for building standalone applications, while JavaScript is a scripting language primarily used for web development and to give website functionality and to make it interactive.
+
+Question 2: What is JavaScript?
+Answer: It's a scripting language used mainly for making websites interactive. It runs on web browsers and allows for dynamic content and behavior.
+
+Question 3: What are the data types supported by JavaScript?
+Answer: JavaScript supports several data types including numbers, strings, booleans, objects, arrays, and functions.
+
+Question 4: What are the scopes of a variable in JavaScript?
+Answer: Variables in JavaScript have global scope, function scope, or block scope depending on where they are declared.
+
+Question 5: What is Callback?
+Answer: A callback is a function passed as an argument to another function, which will be executed later or asynchronously.
+
+Question 6: What is Closure? Give an example.
+Answer: A closure is a function that has access to its own scope, as well as the outer scope in which it was defined, even after the outer scope has closed. Example:
+
+function outerFunction() {
+   let outerVariable = 'I am from outer function';
+   function innerFunction() {
+       console.log(outerVariable);
+   }
+   return innerFunction;
+}
+let closureExample = outerFunction();
+closureExample(); // Output: I am from outer function
+
+Question 7: What is the difference between the operators ‘==‘ & ‘===‘?
+Answer: '==' checks only for equality of value, while '===' checks for both equality of value and equality of type.
+
+Question 8: What is the difference between null & undefined?
+Answer: Null represents an intentional absence of any value, while undefined means a variable has been declared but not assigned a value.
+
+Question 9: What would be the result of 2+5+"3"?
+Answer: The result would be "73" because JavaScript will first add 2 and 5 as numbers, resulting in 7, then concatenate the string "3" to it.
+
+Question 10: What is the difference between Call & Apply?
+Answer: Both Call and Apply are methods used to invoke functions, but Call accepts an argument list, while Apply accepts an array of arguments.
