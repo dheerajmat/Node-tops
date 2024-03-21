@@ -1,0 +1,42 @@
+
+
+1. What is Node.js? Where can you use it?
+   - Node.js is an open-source, cross-platform JavaScript runtime environment. It allows developers to execute JavaScript code outside of a web browser.
+   - You can use Node.js for various purposes:
+     - Server-side scripting: Build web servers, APIs, and backend services.
+     - Command-line tools: Create utilities and scripts that run in the terminal.
+     - Real-time applications: Develop chat applications, gaming servers, and collaborative tools.
+
+2. Explain callback in Node.js:
+   - In Node.js, a callback is a function passed as an argument to another function. It is executed when the parent function completes its task.
+   - Commonly used in asynchronous operations (e.g., reading files, making API requests).
+  
+
+3. Advantages of using promises instead of callbacks:
+   - Promises provide a more structured way to handle asynchronous operations.
+   - Benefits:
+     - Chaining: Easily chain multiple asynchronous calls.
+     - Error handling: Separate error handling from success handling.
+     - Readability: Promises make code more readable.
+ 
+
+
+4. What is NPM?
+   - NPM (Node Package Manager) is a package manager for Node.js.
+   - It allows you to install, manage, and share reusable JavaScript libraries (packages/modules).
+   - You can use NPM to install packages globally or locally within your project.
+   - for install we use npm i ____ require things.
+
+5. Modules in Node.js:
+   - Modules are reusable pieces of code that encapsulate functionality.
+   - Common types of modules:
+     1 Core modules:        Built-in modules (e.g., fs, http, path).
+     2 Local modules:       Custom modules created by developers.
+     3 Third-party modules: Installed via NPM.
+  
+
+
+
+6. Creating a TODO app using the FS module with yargs (command line arguments):
+   [next file todo.js]
+     
