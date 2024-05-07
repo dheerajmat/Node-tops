@@ -1,0 +1,77 @@
+Q1 What is Express.js?
+
+ Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It is designed for building single-page, multi-page, and hybrid web applications.
+
+
+ Q2 .Create localhost server using express.
+
+  first install npm install express
+
+  const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening at http://localhost:${port}`);
+});
+
+Q3.  To create a basic "Hello World" app using Node.js and Express, you can modify the above example like this:
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World from Express!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening at http://localhost:${port}`);
+});
+
+
+Q4.To create a weather app using Node.js, Express.js, and Handlebars (hbs), you can use an API like OpenWeatherMap. Here's a basic outline of how you might implement it:
+
+
+const express = require('express');
+const axios = require('axios');
+const hbs = require('hbs');
+
+const app = express();
+const port = 3000;
+
+app.set('view engine', 'hbs');
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'Weather App'
+  });
+});
+
+app.get('/weather', async (req, res) => {
+  const { country, state, city } = req.query;
+  const apiKey = 'YOUR_API_KEY';
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${apiKey}`;
+
+  try {
+    const response = await axios.get(apiUrl);
+    const weatherData = response.data;
+    res.render('weather', {
+      title: 'Weather Report',
+      weatherData: weatherData
+    });
+  } catch (error) {
+    res.status(500).send('Error fetching weather data');
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening at http://localhost:${port}`);
+});
+
+
+
